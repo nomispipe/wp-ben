@@ -9,6 +9,21 @@
                     </div>
                 <img class="grid-image" src="./images/hero.jpg" alt="Brote im Regal"/>
                
+                <?php
+                                $posts = new WP_Query(array('category_name' => 'philosophie' ));
+                                if( $posts->have_posts() ) {
+                                    while( $posts->have_posts() ) {
+                                        $posts->the_post(); // iterate the post here
+                            ?>
+                                <ul>
+                                    <li><?= the_title(); ?></li>
+                                    <li><?= the_content(); ?></li>
+                                    <li><?= get_post_custom_values('image-position')[0] ?></li>
+                                </ul>
+                            <?php
+                                    }
+                                }
+                            ?>
                
                 
                 <img class="grid-image mobile-hidden" src="./images/hero.jpg" alt="Brote im Regal"/>
