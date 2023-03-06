@@ -1,4 +1,4 @@
-<?php /* Template Name: Workshop */ ?>
+<?php /* Template Name: page */ ?>
 <?php get_header(); ?>
 
 <main id="workshop-page">
