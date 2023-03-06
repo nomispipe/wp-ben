@@ -30,8 +30,8 @@
           
             <ul>
                 <li><a href="#intro">Philosophie</a></li>
-                <li><a href="#workshops">Workshops</a></li>
-                <li><a href="#jobs">Jobs</a></li>
+                <li><a href="/page_id=28">Workshops</a></li>
+                <li><a href="/page_id=16">Jobs</a></li>
             </ul>
         </nav>
         <div class="hero">
