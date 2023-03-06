@@ -11,7 +11,7 @@
                                         $posts->the_post(); // iterate the post here
                             ?>
 
-                              <?php the_post_thumbnail(); ?>
+                              <h2> <?php the_post_thumbnail(); ?> </h2>
                               <div class ="wrapper-image">
                               <?php the_title(); ?>
                               <?php the_content(); ?>
