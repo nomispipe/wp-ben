@@ -1,0 +1,33 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    color: var(--primary);
+    padding: 2rem;
+    ul{
+        display: flex;
+        justify-content: space-evenly;
+        li{
+            padding-inline: 1rem;
+            a{
+                font-weight: 500;
+                color: var(--primary);
+                font-size: 2rem;
+               &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .home{
+        font-weight: 500;
+        color: var(--primary);
+        font-size: 2rem;
+    }
+}
+
+
+

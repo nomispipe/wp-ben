@@ -1,0 +1,50 @@
+
+header{
+    .desktop-hidden{
+        display: none;
+        @include breakpoint(0, $mobile) {
+            display: block;
+        }
+    }
+    .hero{
+        position: relative;
+        height: fit-content;
+
+        .hero-text{
+            position: absolute;
+            top: 200px;
+            left: 200px;
+            @include breakpoint(0, $mobile) {
+                top: 50%;
+                left: 20%;
+            }
+        }
+        h1{
+            font-family: "Maven Pro";
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 5rem;
+
+            @include breakpoint(0, $mobile) {
+                font-size: 2rem;
+            }
+        }
+
+        img{
+            filter: brightness(0.5);
+            width: 100%;
+            max-height: 90vh;
+           object-fit: cover;
+            z-index: -1;
+        }
+        p{
+            font-family: "Maven Pro";
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 5rem;
+            @include breakpoint(0, $mobile) {
+                font-size: 2rem;
+            }
+        }
+    }
+}

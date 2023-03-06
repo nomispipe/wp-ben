@@ -1,0 +1,28 @@
+
+footer{
+    margin-top: 8rem;
+    padding-block: 3rem;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-evenly;
+    @include breakpoint(0, $mobile) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    ul{
+        @include breakpoint(0, $mobile) {
+           padding-bottom: 2rem;
+        }
+        li{
+            font-family: 'Maven Pro';
+            font-size: 1.5rem;
+            color: var(--white);
+            &:first-child{
+                font-size: 2rem;
+                font-weight: 500;
+            }
+        }
+        
+    }
+}

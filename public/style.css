@@ -1,0 +1,499 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+ *    v2.0 | 20110126
+ *       License: none (public domain)
+ *       */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  --primary: #5DBB84;
+  --white: #FFFFFF;
+  --black: #2F2A21;
+}
+
+/* maven-pro-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Maven Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/maven-pro-v32-latin-regular.woff2") format("woff2"), url("../fonts/maven-pro-v32-latin-regular.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* maven-pro-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Maven Pro";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/maven-pro-v32-latin-500.woff2") format("woff2"), url("../fonts/maven-pro-v32-latin-500.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* maven-pro-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Maven Pro";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/maven-pro-v32-latin-600.woff2") format("woff2"), url("../fonts/maven-pro-v32-latin-600.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.show {
+  display: block;
+  visibility: visible;
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+  font-family: "Maven Pro";
+}
+
+a {
+  text-decoration: none;
+  font-family: "Maven Pro";
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  flex-direction: row;
+  color: var(--primary);
+  padding: 2rem;
+}
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+nav ul li {
+  padding-inline: 1rem;
+}
+nav ul li a {
+  font-weight: 500;
+  color: var(--primary);
+  font-size: 2rem;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+nav .home {
+  font-weight: 500;
+  color: var(--primary);
+  font-size: 2rem;
+}
+
+@media (min-width: 0rem) and (max-width: 47.8125rem) {
+  nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+    width: 100%;
+    background-color: var(--white);
+    z-index: 4;
+  }
+  #hamburger {
+    width: 24px;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    border: none;
+    background-color: transparent;
+    z-index: 10;
+    height: 12px;
+  }
+  #hamburger [class^=line-] {
+    position: absolute;
+    background-color: var(--primary);
+    width: 100%;
+    height: 2px;
+  }
+  #hamburger:hover {
+    cursor: pointer;
+  }
+  #hamburger .line-1 {
+    top: 0;
+  }
+  #hamburger .line-2 {
+    top: 8px;
+    width: 75%;
+    right: -12px;
+  }
+  #hamburger.open .line-1 {
+    transform: rotate(45deg);
+    background-color: var(--white);
+  }
+  #hamburger.open .line-2 {
+    top: 0;
+    width: 100%;
+    transform: rotate(-45deg);
+    background-color: var(--white);
+  }
+  #hamburger.closed + ul {
+    transform: translateX(100%);
+    transition: transform 0.6s;
+  }
+  #hamburger.open + ul {
+    transform: translateX(0);
+    transition: transform 0.6s;
+  }
+  nav ul {
+    z-index: 5;
+    display: block;
+    position: fixed;
+    padding: 3rem 1rem 1rem 1rem;
+    width: 75vw;
+    box-shadow: -5px 0 10px 0 rgba(0, 0, 0, 0.1);
+    top: 0;
+    right: 0;
+    background-color: var(--primary);
+    height: 100vh;
+    text-align: right;
+  }
+  nav ul li {
+    padding-top: 25px;
+  }
+  nav ul li a {
+    color: var(--white);
+  }
+}
+footer {
+  margin-top: 8rem;
+  padding-block: 3rem;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: space-evenly;
+}
+@media (min-width: 0rem) and (max-width: 47.8125rem) {
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 0rem) and (max-width: 47.8125rem) {
+  footer ul {
+    padding-bottom: 2rem;
+  }
+}
+footer ul li {
+  font-family: "Maven Pro";
+  font-size: 1.5rem;
+  color: var(--white);
+}
+footer ul li:first-child {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+header .desktop-hidden {
+  display: none;
+}
+@media (min-width: 0rem) and (max-width: 47.8125rem) {
+  header .desktop-hidden {
+    display: block;
+  }
+}
+header .hero {
+  position: relative;
+  height: fit-content;
+}
+header .hero .hero-text {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+}
+@media (min-width: 0rem) and (max-width: 47.8125rem) {
+  header .hero .hero-text {
+    top: 50%;
+    left: 20%;
+  }
+}
+header .hero h1 {
+  font-family: "Maven Pro";
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 5rem;
+}
+@media (min-width: 0rem) and (max-width: 47.8125rem) {
+  header .hero h1 {
+    font-size: 2rem;
+  }
+}
+header .hero img {
+  filter: brightness(0.5);
+  width: 100%;
+  max-height: 90vh;
+  object-fit: cover;
+  z-index: -1;
+}
+header .hero p {
+  font-family: "Maven Pro";
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 5rem;
+}
+@media (min-width: 0rem) and (max-width: 47.8125rem) {
+  header .hero p {
+    font-size: 2rem;
+  }
+}
+
+#workshop {
+  margin-top: 4rem;
+}
+#workshop h2 {
+  margin-inline: 3rem;
+  max-width: 90%;
+  color: var(--black);
+  font-size: 3rem;
+  font-weight: 600;
+  border-bottom: 4px solid var(--black);
+}
+@media (min-width: 0rem) and (max-width: 47.8125rem) {
+  #workshop h2 {
+    font-size: 2rem;
+    margin-inline: 1rem;
+  }
+}
+#workshop .grid {
+  background-color: var(--primary);
+  margin-top: 4rem;
+  padding-block: 3rem;
+  display: grid;
+  grid-template-columns: 3fr 5fr;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 0rem) and (max-width: 47.8125rem) {
+  #workshop .grid {
+    grid-template-columns: 3fr 1fr;
+    padding-block: 0;
+  }
+}
+#workshop .wrapper-text {
+  padding-inline: 2rem;
+}
+@media (min-width: 0rem) and (max-width: 47.8125rem) {
+  #workshop .wrapper-text {
+    padding-block: 2rem;
+  }
+}
+#workshop .wrapper-text p {
+  color: var(--white);
+  font-family: "Maven Pro";
+  font-size: 1.5rem;
+  padding-bottom: 3rem;
+}
+#workshop .wrapper-text a {
+  text-transform: uppercase;
+  padding: 0.8rem;
+  color: var(--white);
+  font-size: 1.5rem;
+  border: 4px solid var(--white);
+}
+#workshop .wrapper-text a:hover {
+  text-decoration: underline;
+}
+#workshop .grid-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+@media (min-width: 0rem) and (max-width: 47.8125rem) {
+  #workshop .grid-image {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+#intro {
+  margin-top: 4rem;
+}
+#intro h2 {
+  margin-inline: 3rem;
+  max-width: 90%;
+  color: var(--black);
+  font-size: 3rem;
+  font-weight: 600;
+  border-bottom: 4px solid var(--black);
+}
+@media (min-width: 0rem) and (max-width: 47.8125rem) {
+  #intro h2 {
+    font-size: 2rem;
+    margin-inline: 1rem;
+  }
+}
+#intro .grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 0rem) and (max-width: 47.8125rem) {
+  #intro .grid {
+    grid-template-columns: 1fr;
+  }
+}
+#intro .wrapper-image {
+  padding-block: 2rem;
+  padding-inline: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 0rem) and (max-width: 47.8125rem) {
+  #intro .wrapper-image {
+    padding-block: 2rem;
+    align-items: flex-start;
+  }
+}
+#intro .wrapper-image h3 {
+  font-family: "Maven Pro";
+  color: var(--primary);
+  font-size: 4rem;
+  padding-bottom: 1.5rem;
+}
+@media (min-width: 0rem) and (max-width: 47.8125rem) {
+  #intro .wrapper-image h3 {
+    font-size: 3rem;
+  }
+}
+#intro .wrapper-image p {
+  font-family: "Maven Pro";
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+#intro .grid-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+@media (min-width: 0rem) and (max-width: 47.8125rem) {
+  #intro .mobile-hidden {
+    display: none;
+  }
+}
+#intro .desktop-hidden {
+  display: none;
+}
+@media (min-width: 0rem) and (max-width: 47.8125rem) {
+  #intro .desktop-hidden {
+    display: block;
+  }
+}
+
+#jobs {
+  margin-top: 4rem;
+}
+#jobs h2 {
+  margin-inline: 3rem;
+  max-width: 90%;
+  color: var(--black);
+  font-size: 3rem;
+  font-weight: 600;
+  border-bottom: 4px solid var(--black);
+}
+@media (min-width: 0rem) and (max-width: 47.8125rem) {
+  #jobs h2 {
+    font-size: 2rem;
+    margin-inline: 1rem;
+  }
+}
+#jobs .grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 0rem) and (max-width: 47.8125rem) {
+  #jobs .grid {
+    grid-template-columns: 1fr 3fr;
+  }
+}
+#jobs .wrapper-text {
+  padding-inline: 2rem;
+}
+#jobs .wrapper-text p {
+  color: var(--primary);
+  font-family: "Maven Pro";
+  font-size: 1.5rem;
+  padding-bottom: 3rem;
+}
+#jobs .wrapper-text a {
+  text-transform: uppercase;
+  padding: 0.8rem;
+  color: var(--primary);
+  font-size: 1.5rem;
+  border: 4px solid var(--primary);
+}
+#jobs .wrapper-text a:hover {
+  text-decoration: underline;
+}
+#jobs .grid-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+@media (min-width: 0rem) and (max-width: 47.8125rem) {
+  #jobs .grid-image {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

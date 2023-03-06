@@ -1,0 +1,63 @@
+
+#workshop{
+    margin-top: 4rem;
+    h2{
+        margin-inline: 3rem;
+        max-width: 90%;
+        color: var(--black);
+        font-size: 3rem;
+        font-weight: 600;
+       border-bottom: 4px solid var(--black);
+
+       @include breakpoint(0, $mobile) {
+        font-size: 2rem;
+        margin-inline: 1rem;
+    }
+    }
+    .grid{
+        background-color: var(--primary);
+        margin-top: 4rem;
+        padding-block: 3rem;
+        display: grid;
+        grid-template-columns: 3fr 5fr;
+        justify-content: center;
+        align-items: center;
+        @include breakpoint(0, $mobile) {
+            grid-template-columns:  3fr 1fr;
+            padding-block: 0;
+        }
+    }
+    .wrapper-text{
+        padding-inline: 2rem;
+        @include breakpoint(0, $mobile) {
+           padding-block: 2rem ;
+        }
+        p{
+            color: var(--white);
+            font-family: "Maven Pro";
+            font-size: 1.5rem;
+            padding-bottom: 3rem;
+        }
+
+        a{
+           text-transform: uppercase;
+            padding: 0.8rem;
+            color: var(--white);
+            font-size: 1.5rem;
+            border: 4px solid var(--white);
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    .grid-image{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        @include breakpoint(0, $mobile) {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+}
