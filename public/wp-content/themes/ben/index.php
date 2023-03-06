@@ -3,19 +3,14 @@
         <section id="intro">
             <h2>B³ IS OUR WAY</h2>
             <div class="grid">
-                <div class ="wrapper-image">
-                    <h3>B¹ - Brot</h3>
-                    <p>Begonnen hat alles vor 6000 Jahren, im heutigen Ägypten wurde das aller erste Brot gebacken. </p>
-                    </div>
-                <img class="grid-image" src="./images/hero.jpg" alt="Brote im Regal"/>
-               
+                
                 <?php
                                 $posts = new WP_Query(array('category_name' => 'philosophie' ));
                                 if( $posts->have_posts() ) {
                                     while( $posts->have_posts() ) {
                                         $posts->the_post(); // iterate the post here
                             ?>
-                            
+
                               <?php the_post_thumbnail(); ?>
                               <div class ="wrapper-image">
                               <?php the_title(); ?>
@@ -27,17 +22,7 @@
                             ?>
                
                 
-                <img class="grid-image mobile-hidden" src="./images/hero.jpg" alt="Brote im Regal"/>
-                <div class ="wrapper-image">
-                    <h3>B² - Bäcker</h3>
-                    <p>Ohne unsere Bäckermeister wären wir nicht wo wir heute sind, darum sind uns Mitarbeiter genauso wichtig wie unsere Kunden, das schmeckt man auch raus. </p>
-                    </div>
-                    <img class="grid-image desktop-hidden" src="./images/hero.jpg" alt="Brote im Regal"/>
-                <div class ="wrapper-image">
-                    <h3>B³ - Ben</h3>
-                    <p>Nicht vor 6000 Jahren aber vor 16 Jahren hat Ben seinen Traum realisiert seine eigene Bäckerei, und mit genauso viel Begeisterung wird er uns die nächsten 6000 Jahre bebacken. </p>
-                    </div>
-                <img class="grid-image" src="./images/hero.jpg" alt="Brote im Regal"/>
+               
                 
         </div>
         </section>
