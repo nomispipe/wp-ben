@@ -16,7 +16,7 @@
 
                                     
                                     <div class ="wrapper-image">
-                                    <h2> <?php the_title(); ?> </h2>
+                                    <h3> <?php the_title(); ?> </h3>
                                     <?php the_content(); ?>
                                 </div>
                                 <?php the_post_thumbnail(); ?> 
@@ -26,7 +26,7 @@
                                         ?>
                                     <?php the_post_thumbnail(); ?> 
                                     <div class ="wrapper-image">
-                                    <h2> <?php the_title(); ?> </h2>
+                                    <h3> <?php the_title(); ?> </h3>
                                     <?php the_content(); ?>
                                     </div>
                                         <?php
