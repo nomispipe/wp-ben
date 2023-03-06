@@ -22,11 +22,7 @@
         </ul>
 
     </footer>
-    <script>
-        document.addEventListener("DOMContentLoaded", function (event) {
-            MainNav.init();
-        });
-    </script>
+    
 
 <?php wp_footer(); ?>
 </body>
