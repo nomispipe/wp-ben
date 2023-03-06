@@ -64,7 +64,7 @@ table {
   font-family: "Maven Pro";
   font-style: normal;
   font-weight: 400;
-  src: url("./fonts/maven-pro-v32-latin-regular.woff2") format("woff2"), url("../fonts/maven-pro-v32-latin-regular.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: url("../fonts/maven-pro-v32-latin-regular.woff2") format("woff2"), url("../fonts/maven-pro-v32-latin-regular.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* maven-pro-500 - latin */
 @font-face {
@@ -72,7 +72,7 @@ table {
   font-family: "Maven Pro";
   font-style: normal;
   font-weight: 500;
-  src: url("./fonts/maven-pro-v32-latin-500.woff2") format("woff2"), url("../fonts/maven-pro-v32-latin-500.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: url("../fonts/maven-pro-v32-latin-500.woff2") format("woff2"), url("../fonts/maven-pro-v32-latin-500.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* maven-pro-600 - latin */
 @font-face {
@@ -80,7 +80,7 @@ table {
   font-family: "Maven Pro";
   font-style: normal;
   font-weight: 600;
-  src: url("./fonts/maven-pro-v32-latin-600.woff2") format("woff2"), url("../fonts/maven-pro-v32-latin-600.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: url("../fonts/maven-pro-v32-latin-600.woff2") format("woff2"), url("../fonts/maven-pro-v32-latin-600.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 .hidden {
   display: none;

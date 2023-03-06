@@ -1,7 +1,7 @@
 <?php /* Template Name: page */ ?>
 <?php get_header(); ?>
 
-<main id="workshop-page">
+<main id="page">
     <?php 
         if (have_posts()) {
             while(have_posts()) {

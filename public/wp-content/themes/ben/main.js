@@ -1,15 +1,1 @@
-window.addEventListener("load", () => {
-   
-    const button = document.getElementById('hamburger')
-
-    button.addEventListener("click", e => {
-        console.log(button.classList)
-        if(button.classList.contains('closed')) {
-            button.classList.add('open');
-            button.classList.remove('closed');
-        } else {
-            button.classList.add('closed');
-            button.classList.remove('open');
-        }
-    })
-})
+(()=>{var i=Object.defineProperty;var n=(s,e)=>{for(var t in e)i(s,t,{get:e[t],enumerable:!0})};var o={};n(o,{init:()=>a});function a(){let s=document.getElementById("hamburger");s.addEventListener("click",e=>{console.log(s.classList),s.classList.contains("closed")?(s.classList.add("open"),s.classList.remove("closed")):(s.classList.add("closed"),s.classList.remove("open"))})}window.MainNav=o;})();
