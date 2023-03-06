@@ -15,6 +15,7 @@
                                     while( $posts->have_posts() ) {
                                         $posts->the_post(); // iterate the post here
                             ?>
+                              <?php the_post_thumbnail(); ?>
                                 <ul>
                                     <li><?= the_title(); ?></li>
                                     <li><?= the_content(); ?></li>
