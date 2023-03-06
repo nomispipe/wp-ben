@@ -32,7 +32,7 @@
                 <p>
                     Egal ob Profi oder Anfänger, Ben nimmt sich für euch Zeit und macht euch in kürzester Zeit zum Bäckermeister.
                 </p>
-                <a href="/">buche jetzt</a>
+                <a href="/?page_id=16">buche jetzt</a>
             </div>
             <img class="grid-image" src="./images/hero.jpg" alt="Brote im Regal"/>
 
@@ -46,7 +46,7 @@
                 <p>
                     Dann werde Teil von B³, und mach dein Hobby zum Beruf. Täglich neue Herausforderungen, gratis Backwaren für daheim und viele weitere Boni warten auf dich. 
                 </p>
-                <a href="/">bewerben</a>
+                <a href="/?page_id=28">bewerben</a>
             </div>
                 
 
