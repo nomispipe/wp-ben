@@ -15,12 +15,12 @@
                                     while( $posts->have_posts() ) {
                                         $posts->the_post(); // iterate the post here
                             ?>
+                            
                               <?php the_post_thumbnail(); ?>
-                                <ul>
-                                    <li><?= the_title(); ?></li>
-                                    <li><?= the_content(); ?></li>
-                                    <li><?= get_post_custom_values('image-position')[0] ?></li>
-                                </ul>
+                              <div class ="wrapper-image">
+                              <?php the_title(); ?>
+                              <?php the_content(); ?>
+                            </div>
                             <?php
                                     }
                                 }
