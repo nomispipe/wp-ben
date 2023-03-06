@@ -422,6 +422,11 @@ header .hero p {
   height: auto;
   object-fit: cover;
 }
+#intro img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 @media (min-width: 0rem) and (max-width: 47.8125rem) {
   #intro .mobile-hidden {
     display: none;
