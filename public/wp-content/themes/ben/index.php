@@ -9,13 +9,32 @@
                                 if( $posts->have_posts() ) {
                                     while( $posts->have_posts() ) {
                                         $posts->the_post(); // iterate the post here
+                                    
+                                if( 'left' == get_post_custom_values( 'image-position' )[0]  )
+                                {
+                                    ?>
+
+                                    
+                                    <div class ="wrapper-image">
+                                    <h2> <?php the_title(); ?> </h2>
+                                    <?php the_content(); ?>
+                                </div>
+                                <?php the_post_thumbnail(); ?> 
+                                    <?php
+                                     } 
+                                     else {
+                                        ?>
+                                    <?php the_post_thumbnail(); ?> 
+                                    <div class ="wrapper-image">
+                                    <h2> <?php the_title(); ?> </h2>
+                                    <?php the_content(); ?>
+                                    </div>
+                                        <?php
+                                     }
+                                    ?>
+                               
                             ?>
 
-                              <h2> <?php the_post_thumbnail(); ?> </h2>
-                              <div class ="wrapper-image">
-                              <?php the_title(); ?>
-                              <?php the_content(); ?>
-                            </div>
                             <?php
                                     }
                                 }
